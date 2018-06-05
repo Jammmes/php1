@@ -1,4 +1,3 @@
-
 <?php
 //Подключаем функционал
 require_once '../config/params.php';
@@ -15,6 +14,8 @@ require_once'../engine/queryToDB.php';
   <head>
   	<title>lesson5</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="packages/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -26,13 +27,12 @@ require_once'../engine/queryToDB.php';
         <?php endforeach?>
 
       </div>
-      <footer class="footer">lesson5 - footer</footer>	
+      <button id = "refresh">Обновить</button>  
+      <footer class="footer">lesson5 - footer</footer>
     </div>
   </body>
 </html>
 
-
-<?php
+<?php    
 //закрываем сессию
 mysqli_close($GLOBALS['db']);
-

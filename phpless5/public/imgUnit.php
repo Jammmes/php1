@@ -5,8 +5,6 @@ require_once'../engine/db.php';
 require_once'../engine/templating.php';
 require_once'../engine/queryToDB.php';
 
-//ЭТО ТЕСТИРОВОЧНАЯ ВЕРСИЯ, ПОТОМ ЕЕ НУЖНО ПЕРЕКИНУТЬ В ПАПКУ С ШАБЛОНАМИ
-
 $imageId = array_key_exists('id', $_GET) ? $_GET['id'] : -1;
 $image = getGalleryUnit($imageId);
 ?>
@@ -21,7 +19,7 @@ $image = getGalleryUnit($imageId);
     <div class="container">
       <!--Проверка на наличие картинки по запросу-->
       <?php if($image === null): ?>
-        <h1> 404 Not Found </h1>
+        <h1> 404 Page not Found </h1>
       <?php else: ?>
         <!-- Применяем шаблонизацию -->
         <header class="header_full">Просмотров:<?= $image['views'];?></header>    

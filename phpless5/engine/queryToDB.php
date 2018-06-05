@@ -41,6 +41,11 @@ function increaseView($id){
   mysqli_query($db, 'UPDATE `photos` SET `views`= `views`+1 WHERE `id` = '.$id);
 }
 
+/**
+ * Загружает данные о фото в базу данных, предварительно удалив старые данные
+ * @param string $path - путь до папки с картинками
+ * @return none
+ */
 function reloadImg($path){
   global $db;
   //очистим таблицу

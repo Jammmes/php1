@@ -14,4 +14,3 @@ function HTMLRender ($template,$variables){
      }
 return $content;
 };
-
