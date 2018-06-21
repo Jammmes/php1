@@ -1,0 +1,10 @@
+<div class="row border m-1 bg-secondary text-light">
+    <div class="col-sm-7 col-xs-7"></div>
+    <div class="p-1 col-sm-1 col-xs-1 text-center">Номер заказа: <span class="text-warning">{{id}}</span></div>
+    <div class="p-1 col-sm-1 col-xs-1 text-center">Заказчик: <span class="text-warning">{{login}}</span></div>
+    <div class="p-1 col-sm-2 col-xs-2 text-center">Дата заказа: <span class="text-warning">{{date}}</span></div>
+    <form class="formOrdersList col-sm-1 col-xs-1" action="/deleteOrder" method="post">
+        <input type="hidden" name="order_id" value="{{id}}">
+        <button class="btn btn-sm btn-danger m-1" id="deleteOrder" type="submit">удалить</button>
+    </form>
+</div>

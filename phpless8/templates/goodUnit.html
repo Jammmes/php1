@@ -1,0 +1,17 @@
+<div class="card p-1 m-1 text-center" style="width: 14rem;">
+    <img class="card-img-top" src="{{img}}" alt="image not found">
+    <div class="card-body">
+        <h5 class="card-title m-0">
+            <form class="goodCard" action="goodCard" method="post">
+                <input type="hidden" name="id" value="{{id}}">
+                <button type="submit" class="btn btn-light">{{name}}</button>
+            </form>
+        </h5>
+        <p class="card-text m-0">Страна-изготовитель: {{country}}</p>
+        <p class="card-text"> Цена: {{price}}</p>
+        <form class="goodUnit" action="addToCart" method="post">
+            <input type="hidden" name="id" value="{{id}}">
+            <button class="btn btn-primary" type="submit">Добавить в корзину</button>
+        </form>
+    </div>
+</div>

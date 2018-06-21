@@ -1,0 +1,14 @@
+<div class="row text-center border m-1">
+    <div class="col-sm-4 col-xs-4">
+        <div>{{name}}</div>
+    </div>
+    <div class="col-sm-4 col-xs-4">
+        <div>{{quant}}</div>
+    </div>
+    <div class="col-sm-4 col-xs-4">
+        <form class="cartUnit" action="deleteFromCart" method="post">
+            <input type="hidden" name="id" value="{{good_id}}">
+            <button class="btn btn-sm btn-danger m-1" type="submit">Удалить</button>
+        </form>
+    </div>
+</div>
